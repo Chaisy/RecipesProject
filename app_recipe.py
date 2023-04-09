@@ -1,15 +1,13 @@
-import registration
+import Admin
+import Chef
 import log_in
+import User
 import customtkinter as CTk
-
-
-
-
-# class App(CTk.CTk):
-
 
 
 class start(CTk.CTk):
 
-    log_in.Log_in()
-
+    User.UserStart()
+    # Chef.ChefInt()
+    # Admin.AdminInt()
+    # log_in.Log_in()

@@ -1,10 +1,12 @@
-import customtkinter
-
-import app_recipe as ap
+import pickle
+from CTkMessagebox import CTkMessagebox
 import registration
+import User
+import Chef
 import customtkinter as CTk
 from PIL import Image
-
+#вопрос с админом, любой пользователь не модет же им быть
+#почему 2 окна)))))))) при вызове классе из другого файла он отрисовывает дважды
 
 class Log_in(CTk.CTk):
     def __init__(self):
@@ -40,7 +42,8 @@ class Log_in(CTk.CTk):
         self.entry_password.grid(row=0, column=0, sticky="n", pady=(200, 0))
 
         self.go_button = CTk.CTkButton(master=self.menu_frame, width=300, height=40, hover_color="#bdd88b",
-                                       fg_color="#6f8e3e", text="Go!", font=("Courier", 18))
+                                       fg_color="#6f8e3e", text="Go!", font=("Courier", 18),
+                                       command=lambda: self.LogIn_Check())
         self.go_button.grid(row=0, column=0, sticky="n", pady=(280, 0))
 
         self.registration_button = CTk.CTkButton(master=self.menu_frame, width=300, height=40, hover_color="#bdd88b",
@@ -60,18 +63,31 @@ class Log_in(CTk.CTk):
 
 
     def home_button_event(self):
-            self.select_frame_by_name("Registration")
+        self.destroy()
+        registration.Registration()
 
-    def LogIn_button_event(self):
-            self.select_frame_by_name("LogIn")
+    def LogIn_Check(self):
+        file_DataBase = open("dataDase_local.txt", 'rb')
+        data = pickle.load(file_DataBase)
+        print(data)
+        file_DataBase.close()
+        if self.entry_nickname.get() in data:
+            # data_list = data[self.entry_nickname.get()]
+            if self.entry_password.get() == data[self.entry_nickname.get()]:
+                if self.entry_password.get() in data:
+                    if data[self.entry_password.get()] == "C":
+                        self.destroy()
+                        Chef.ChefInt()
+                        # CTkMessagebox(master=self, title="Congratulations!!!!!", message="You chef!")
+                    if data[self.entry_password.get()] == "U":
+                        self.destroy()
+                        User.Recommendation()
+                        # CTkMessagebox(master=self, title="Congratulations!!!!!", message="You user!")
+                else:
+                        CTkMessagebox(master=self, title="Congratulations!!!!!", message="You nixto!")
+            else:
 
-    def select_frame_by_name(self, name):
+                CTkMessagebox(title="Failed",message=f"Password is wrong. Please? try again")
+        else:
+            CTkMessagebox(title="Failed",message=f"No user with nickname{self.entry_nickname.get()}, please registrate")
 
-        # show selected frame
-        if name == "LogIn":
-            self.destroy()
-            Log_in()
-
-        if name == "Registration":
-            self.destroy()
-            registration.Registration()
