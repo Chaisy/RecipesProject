@@ -162,6 +162,15 @@ ____
 
 ![Alt-текст]( 153501_Shevtsova_Daria.jpg "Диаграмма классов")
 
+# Результат
+![изображение](https://github.com/Chaisy/RecipesProject/assets/90137735/25e69c90-d31a-4493-a2d4-8045ae33c636)
+![изображение](https://github.com/Chaisy/RecipesProject/assets/90137735/83bf7cb3-ab77-494b-9c76-8279e774305c)
+![изображение](https://github.com/Chaisy/RecipesProject/assets/90137735/662e6783-f7fa-45ff-83ee-623fc734ef80)
+![изображение](https://github.com/Chaisy/RecipesProject/assets/90137735/b40dcc5c-f8af-4ad5-a199-2f6e8a3564cb)
+![изображение](https://github.com/Chaisy/RecipesProject/assets/90137735/1691b38e-f7a7-4391-adca-30a16f619df3)
+![изображение](https://github.com/Chaisy/RecipesProject/assets/90137735/179f9eb6-08d1-4a14-b424-56500d5305b6)
+
+
 
 :green_heart: Good Luck! :green_heart:
 
