@@ -30,7 +30,7 @@ class ChefInt(CTk.CTk):
         super().__init__()
 
         self.geometry("1400x1000")
-        self.title("UserInt")
+        self.title("ChefInt")
         self.resizable(False, False)
 
         self.chefInt_frame = CTk.CTkFrame(master=self, fg_color="white", width=1400, height=1000)
@@ -66,31 +66,31 @@ class ChefInt(CTk.CTk):
 
 
 
-    def MyRecipes(self):
-
-        self.recepies_frame.destroy()
-
-        self.liked_frame = CTk.CTkFrame(master=self.userInt_frame, fg_color="white", width=1400, height=820)
-        self.liked_frame.grid(row=1, column=0)
-
-        self.infoLiked_label = CTk.CTkLabel(master=self.liked_frame, width=1400, height=820, font=("Courier", 10), text_color="black",#50
-                                     text="Here You Can Find Your Recipes")
-        self.infoLiked_label.grid(row=0, column=0)
-        self.likedResipes_frame = CTk.CTkFrame(master=self.liked_frame, fg_color="white", width=1400, height=770)
-        self.recepies_frame.grid(row=1, column=0)
-
-    def Reviews(self):
-
-        self.recepies_frame.destroy()
-
-        self.liked_frame = CTk.CTkFrame(master=self.userInt_frame, fg_color="white", width=1400, height=820)
-        self.liked_frame.grid(row=1, column=0)
-
-        self.infoLiked_label = CTk.CTkLabel(master=self.liked_frame, width=1400, height=820, font=("Courier", 10), text_color="black",#50
-                                     text="Here You Can Find Reviews On Your Recipes")
-        self.infoLiked_label.grid(row=0, column=0)
-        self.likedResipes_frame = CTk.CTkFrame(master=self.liked_frame, fg_color="white", width=1400, height=770)
-        self.recepies_frame.grid(row=1, column=0)
+    # def MyRecipes(self):
+    #
+    #     self.recepies_frame.destroy()
+    #
+    #     self.liked_frame = CTk.CTkFrame(master=self.userInt_frame, fg_color="white", width=1400, height=820)
+    #     self.liked_frame.grid(row=1, column=0)
+    #
+    #     self.infoLiked_label = CTk.CTkLabel(master=self.liked_frame, width=1400, height=820, font=("Courier", 10), text_color="black",#50
+    #                                  text="Here You Can Find Your Recipes")
+    #     self.infoLiked_label.grid(row=0, column=0)
+    #     self.likedResipes_frame = CTk.CTkFrame(master=self.liked_frame, fg_color="white", width=1400, height=770)
+    #     self.recepies_frame.grid(row=1, column=0)
+    #
+    # def Reviews(self):
+    #
+    #     self.recepies_frame.destroy()
+    #
+    #     self.liked_frame = CTk.CTkFrame(master=self.userInt_frame, fg_color="white", width=1400, height=820)
+    #     self.liked_frame.grid(row=1, column=0)
+    #
+    #     self.infoLiked_label = CTk.CTkLabel(master=self.liked_frame, width=1400, height=820, font=("Courier", 10), text_color="black",#50
+    #                                  text="Here You Can Find Reviews On Your Recipes")
+    #     self.infoLiked_label.grid(row=0, column=0)
+    #     self.likedResipes_frame = CTk.CTkFrame(master=self.liked_frame, fg_color="white", width=1400, height=770)
+    #     self.recepies_frame.grid(row=1, column=0)
 
 
 
